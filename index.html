@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	img {
+    float: left;
+	}
+	section {
+		float: right;
+		margin-right: 35em;
+		margin-top: 20em
+	}
+	#guestbook {
+		float: right;
+		margin-right: 70px
+	}
+	
+</style>
+	<title>Flower Catalog</title>
+</head>
+<body>
+	<h1 style="text-align:center;color:orange">Flower Catalog</h1>
+	<hr>
+	<section id="section">
+		<ul>
+			<li><a href="page2.html">Abeliophyllum</a></li>
+			<li><a href="page3.html">Ageratum</a></li>
+			<img id="my_img" onclick="hideIt()" src="animated_flower.gif" alt="Flower View" style="hidden:true">
+		</ul>
+		<div id="guestbook">
+		<p><a href="guest_book.html">Guest Book</a></p>
+	</div>
+	</section>
+
+	
+		<img src="flowers-09.jpg" alt="Flower View" style="width:950px">
+
+<script type="text/javascript">
+
+
+function hideIt(){
+	document.getElementById("my_img").style.visibility = "hidden";
+	showit();
+}
+function showit(){
+	setTimeout(function(){(document.getElementById("my_img").style.visibility = "visible")},1000);
+}
+</script>
+</body>
+</html>

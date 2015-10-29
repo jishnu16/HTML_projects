@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guest Book</title>
+</head>
+<style>
+	#p1.1{
+		margin-right: 00px;
+		margin-right: 00px;
+	}
+</style>
+<body>
+	<h1 style="text-align:center;color:orange"><a href="index.html"><<</a>Guest Book</h1>
+	<br>
+	<h1>Leave a comment</h1>
+	<section>
+			Name     <input id="name" type="text" size="30" />
+		<br>
+		<br>
+		Comment  <input id="comment" type="text" style="width: 150px;height:80px"/>
+		<br>
+		<input type="submit" onclick="myFunction()" value="Submit"/>
+		<hr>
+		<input type="text" name="textbox3" id="textbox3" readonly="true" style="width: 1500px;height:100px"/>
+
+	</section>	
+
+	<script type="text/javascript">
+	function myFunction(){
+		var arr=[];
+		alert(arr);
+    	arr.push(calculation());
+		textbox3.value=arr.map(function(ele){return ele});
+	}
+	function calculation(){
+		var first = document.getElementById("name").value;
+    	var second = document.getElementById("comment").value;
+    	var answer = first +':' +second;
+    	return answer
+
+	}
+
+	</script>
+</body>
+</html>
