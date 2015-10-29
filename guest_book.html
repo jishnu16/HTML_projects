@@ -4,42 +4,29 @@
 	<title>Guest Book</title>
 </head>
 <style>
-	#p1.1{
-		margin-right: 00px;
-		margin-right: 00px;
-	}
+
 </style>
 <body>
 	<h1 style="text-align:center;color:orange"><a href="index.html"><<</a>Guest Book</h1>
 	<br>
 	<h1>Leave a comment</h1>
-	<section>
-			Name     <input id="name" type="text" size="30" />
+
+		<form>
+		Name:<textarea id="names" rows="1" cols="10"></textarea>
 		<br>
-		<br>
-		Comment  <input id="comment" type="text" style="width: 150px;height:80px"/>
-		<br>
-		<input type="submit" onclick="myFunction()" value="Submit"/>
+		Comment:<textarea id="words" rows="10" cols="20"></textarea>
+		<input type="button" onclick="getwords()" value="Enter" /> <br>
 		<hr>
-		<input type="text" name="textbox3" id="textbox3" readonly="true" style="width: 1500px;height:100px"/>
+		<p id="para"></p>
+</form>
 
-	</section>	
-
-	<script type="text/javascript">
-	function myFunction(){
-		var arr=[];
-		alert(arr);
-    	arr.push(calculation());
-		textbox3.value=arr.map(function(ele){return ele});
-	}
-	function calculation(){
-		var first = document.getElementById("name").value;
-    	var second = document.getElementById("comment").value;
-    	var answer = first +':' +second;
-    	return answer
-
-	}
-
-	</script>
+<script type="text/javascript">
+function getwords() {
+	var date_time=new Date();
+	var text1=names.value;
+	var text = words.value;
+	  document.getElementById("para").innerHTML += '<p>'+date_time+'<br>'+text1+": "+text+'</p>';
+}
+</script>
 </body>
 </html>
