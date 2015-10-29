@@ -1,16 +1,3 @@
-// var http = require('http');
-// var fs = require('fs');
-// var data = fs.readFileSync('index.html');
-
-// http.createServer(function (req, res) {
-
-//   res.writeHead(200, {'Content-Type': 'text/html'});
-//   res.write(data)
-//   res.end();
-// }).listen(8030);	
-// console.log("Server starting at port 8030................");
-
-//================================
 var http = require('http');
 var fs = require('fs');
 
